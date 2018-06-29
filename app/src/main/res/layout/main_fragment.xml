@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainSwipeRefreshLayout"
+        android:padding="@dimen/spacing_1x">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainRecyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/mainNoPokemonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/mainPokeballImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pokeball_placeholder" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_pokemons"
+            android:textColor="@color/black"
+            android:textSize="@dimen/spacing_2.5x"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/spacing_2x"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/to_add_some_pokemons"
+            android:textSize="@dimen/spacing_2x"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/spacing_1x"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/mainPokemonListProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
